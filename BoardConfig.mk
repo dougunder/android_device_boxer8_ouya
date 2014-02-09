@@ -83,8 +83,8 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # Build kernel from source
-TARGET_KERNEL_SOURCE := kernel/ouya/ouya_1_1
-TARGET_KERNEL_CONFIG := ouya_1_1_defconfig 
+TARGET_KERNEL_SOURCE := kernel/boxer8/ouya
+TARGET_KERNEL_CONFIG := cyanogenmod_ouya_defconfig 
 
 # Recovery Options
 BOARD_HAS_NO_SELECT_BUTTON := true
