@@ -86,6 +86,8 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_KERNEL_SOURCE := kernel/boxer8/ouya
 TARGET_KERNEL_CONFIG := cyanogenmod_ouya_defconfig 
 
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/ouya/ouya_1_1/releasetools/ouya_ota_from_target_files
+
 # Recovery Options
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
