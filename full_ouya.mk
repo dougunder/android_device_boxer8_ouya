@@ -16,4 +16,4 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from ouya device
-$(call inherit-product, device/ouya/ouya_1_1/device_ouya.mk)
+$(call inherit-product, device/boxer8/ouya/device_ouya.mk)

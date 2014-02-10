@@ -43,5 +43,4 @@
 /dev/ion	0666	system	system
 /dev/raydium_ts	0660	system	system
 /dev/timerinfo	0444	system	system
-/sys/devices/system/cpu/cpufreq/gov_interactive* ../interactive/max_boost 0644 system system
-/sys/devices/system/cpu/cpufreq/gov_interactive* ../interactive/go_maxspeed_load 0644 system system
+/dev/block/mmcblk0p5	0644	system	system

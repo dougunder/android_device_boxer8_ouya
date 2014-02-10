@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/audio/Android.mk \
     $(LOCAL_DIR)/full_ouya.mk

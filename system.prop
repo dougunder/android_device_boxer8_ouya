@@ -1,0 +1,10 @@
+#
+# system.prop for ouya
+#
+
+ro.carrier=wifi-only
+ro.sf.lcd_density=213
+ro.cwm.forbid_format=/boot
+persist.tegra.nvmmlite=1
+tf.enable=y
+ro.streaming.video.drs=true

@@ -21,7 +21,7 @@ BOARD_USES_ALSA_AUDIO := false
 BOARD_USES_TINY_AUDIO_HW := false
 
 # inherit from the proprietary version
--include vendor/ouya/ouya_1_1/BoardConfigVendor.mk
+-include vendor/boxer8/ouya/BoardConfigVendor.mk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -42,25 +42,16 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
-# Boot/Recovery image settings  
-BOARD_KERNEL_CMDLINE := 
-BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_PAGESIZE :=
-
 # EGL settings
-BOARD_EGL_CFG := device/ouya/ouya_1_1/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/boxer8/ouya/prebuilt/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Misc display settings
-#BOARD_USE_SKIA_LCDTEXT := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-
-# Support for dock battery
-#TARGET_HAS_DOCK_BATTERY := true
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -82,13 +73,13 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 6304038912
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
-# Build kernel from source
+# kernel
+BOARD_KERNEL_BASE := 0x10000000
 TARGET_KERNEL_SOURCE := kernel/boxer8/ouya
 TARGET_KERNEL_CONFIG := cyanogenmod_ouya_defconfig 
 
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/ouya/ouya_1_1/releasetools/ouya_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/boxer8/ouya/releasetools/ouya_ota_from_target_files
 
 # Recovery Options
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_SDCARD_INTERNAL := true

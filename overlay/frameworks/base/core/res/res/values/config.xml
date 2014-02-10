@@ -22,8 +22,6 @@
 <resources>
     <string name="config_datause_iface" translatable="false">wlan0</string>
 
-    <bool name="config_batterySdCardAccessibility">true</bool>
-
     <bool name="config_allowAllRotations">false</bool>
 
     <string-array translatable="false" name="networkAttributes">
@@ -73,6 +71,8 @@
     
     <bool name="config_automatic_brightness_available">false</bool>
 
+    <bool name="config_screenOffAnimation">false</bool>
+
     <!-- Package name providing network location support. -->
     <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</string>
 
@@ -80,9 +80,6 @@
     <string name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</string>
 
     <integer name="config_downloadDataDirSize">200</integer>
-
-    <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">10</integer>
 
     <bool name="config_voice_capable">false</bool>
 
@@ -93,5 +90,14 @@
     <!-- Maximum wallpaper width for devices with very high-res screen (1920x1200)
          the wallpaper width suggestion by the launcher may be too large for
          the GPU to handle. -->
-    <integer name="config_wallpaperMaxWidth">2048</integer>
+    <integer name="config_wallpaperMaxWidth">1920</integer>
+
+    <bool name="config_showNavigationBar">true</bool>
+
+    <bool name="config_useMasterVolume">true</bool>
+
+    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
+         specified -->
+    <string name="default_wallpaper_component" translatable="false">com.android.phasebeam/.PhaseBeamWallpaper</string>
+
 </resources>

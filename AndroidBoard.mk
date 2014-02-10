@@ -25,4 +25,4 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 # include the non-open-source counterpart to this file
--include vendor/ouya/ouya_1_1/AndroidBoardVendor.mk
+-include vendor/boxer8/ouya/AndroidBoardVendor.mk
