@@ -19,6 +19,7 @@ USE_PROPRIETARY_AUDIO_EXTENSIONS := true
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := false
 BOARD_USES_TINY_AUDIO_HW := false
+COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
 
 # inherit from the proprietary version
 -include vendor/boxer8/ouya/BoardConfigVendor.mk
@@ -43,6 +44,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # EGL settings
+BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_EGL_CFG := device/boxer8/ouya/prebuilt/egl.cfg
 USE_OPENGL_RENDERER := true
 

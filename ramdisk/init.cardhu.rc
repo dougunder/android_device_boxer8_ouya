@@ -3,14 +3,22 @@ import init.cardhu.usb.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
 
-	export EXTERNAL_STORAGE /storage/sdcard0
-	mkdir /storage 0050 system sdcard_r
-	mkdir /storage/sdcard0 0000 system system
-	mkdir /storage/usbdisk 0755 system system
-	# for backwards compatibility
-	symlink /storage/sdcard0 /sdcard
-	symlink /storage/sdcard0 /mnt/sdcard
-	symlink /storage/usbdisk /mnt/usbdisk
+on init
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+    mkdir /storage 0550 system sdcard_r
+    export EXTERNAL_STORAGE /storage/emulated/legacy
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
+
+    # Support legacy paths
+    symlink /storage/emulated/legacy /sdcard
+    symlink /storage/emulated/legacy /mnt/sdcard
+    symlink /storage/emulated/legacy /storage/sdcard0
+    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
+
+    # make the pathes for the external media mounts
+    mkdir /storage/usbdisk 0000 system system
 
 on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
@@ -148,7 +156,7 @@ on property:ro.debuggable=1
 # create virtual SD card at /storage/sdcard0, based on the /data/media directory
 # deamon will drop to user/group system/media_rw after initializing
 # underlying files in /data/media wil be created with user and group media_rw (1023)
-service sdcard /system/bin/sdcard /data/media 1023 1023
+service sdcard /system/bin/sdcard /data/media /mnt/shell/emulated 1023 1023
     class late_start
 
 service eth_mac /system/bin/eth_mac.sh
