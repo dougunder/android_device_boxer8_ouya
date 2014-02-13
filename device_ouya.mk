@@ -27,8 +27,47 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt configuration files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/vold.fstab:system/etc/vold.fstab \
-    $(LOCAL_PATH)/prebuilt/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/asound.conf:system/etc/asound.conf \
+    $(LOCAL_PATH)/configs/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
+    $(LOCAL_PATH)/configs/alsa/pcm/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/default.conf:system/usr/share/alsa/pcm/default.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/front.conf:system/usr/share/alsa/pcm/front.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/side.conf:system/usr/share/alsa/pcm/side.conf \
+    $(LOCAL_PATH)/configs/alsa/pcm/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+    $(LOCAL_PATH)/configs/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+    $(LOCAL_PATH)/configs/alsa/alsa.conf:system/usr/share/alsa/alsa.conf
+
+# media files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/nvcamera.conf:system/etc/nvcamera.conf
+
+# misc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/enctune.conf:system/etc/enctune.conf \
+    $(LOCAL_PATH)/configs/model_frontal.xml:system/etc/model_frontal.xml \
+    $(LOCAL_PATH)/configs/dbus.conf:system/etc/dbus.conf \
+    $(LOCAL_PATH)/configs/nvram_4330.txt:system/etc/nvram_4330.txt
+
+# misc bt config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+# mac
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bt_mac.sh:system/bin/bt_mac.sh \
+    $(LOCAL_PATH)/prebuilt/eth_mac.sh:system/bin/eth_mac.sh
 
 # Input device configuration files
 PRODUCT_COPY_FILES += \
@@ -49,7 +88,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
-    $(LOCAL_PATH)/prebuilt/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     $(LOCAL_PATH)/prebuilt/com.nvidia.balancedpower.xml:system/etc/permissions/com.nvidia.balancedpower.xml \
     $(LOCAL_PATH)/prebuilt/com.nvidia.nvstereoutils.xml:system/etc/permissions/com.nvidia.nvstereoutils.xml
 
@@ -68,10 +106,8 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
     audio.a2dp.default \
-    audio.usb.default \
-    libtinyalsa \
-    libaudioutils \
-    libinvensense_mpl
+    tinymix \
+    libaudioutils
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
@@ -79,13 +115,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
     persist.sys.usb.config=mtp,adb
 
-# media files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/prebuilt/media_profiles.xml:system/etc/media_profiles.xml
-
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
+
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 $(call inherit-product-if-exists, vendor/boxer8/ouya/ouya-vendor.mk)
 
