@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/fstab.cardhu:root/fstab.cardhu \
     $(LOCAL_PATH)/ramdisk/ueventd.cardhu.rc:root/ueventd.cardhu.rc
 
-# Prebuilt configuration files
+## alsa configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/asound.conf:system/etc/asound.conf \
@@ -56,8 +56,6 @@ PRODUCT_COPY_FILES += \
 
 # misc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/enctune.conf:system/etc/enctune.conf \
-    $(LOCAL_PATH)/configs/model_frontal.xml:system/etc/model_frontal.xml \
     $(LOCAL_PATH)/configs/dbus.conf:system/etc/dbus.conf \
     $(LOCAL_PATH)/configs/nvram_4330.txt:system/etc/nvram_4330.txt
 
@@ -106,8 +104,7 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
     audio.a2dp.default \
-    tinymix \
-    libaudioutils
+    audio.usb.default
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \

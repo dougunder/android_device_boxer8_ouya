@@ -82,10 +82,6 @@
 
     <bool name="config_showNavigationBar">true</bool>
 
-    <!-- Flag indicating that the media framework should allow changing
-         master volume stream and nothing else . -->
-    <bool name="config_useMasterVolume">false</bool>
-
     <integer name="config_deviceHardwareKeys">0</integer>
 
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
