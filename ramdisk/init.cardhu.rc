@@ -32,7 +32,6 @@ on fs
 
 on post-fs-data
     mkdir /data/nvcam 0700 media camera
-    mkdir /data/misc/wminput 0776 system system
 
     mkdir /data/media 0770 media_rw media_rw
 
@@ -110,10 +109,6 @@ on boot
     write /sys/block/mmcblk1/bdi/read_ahead_kb   4096
     write /sys/block/mmcblk0/queue/read_ahead_kb 4096
     write /sys/block/mmcblk1/queue/read_ahead_kb 4096
-
-# Wiimote connect status
-    write /data/misc/wminput/connected 0
-    chmod 0666 /data/misc/wminput/connected
 
 # BB mapping symbolic name to the logging ttyACM port
     symlink /dev/ttyACM2 /dev/log_modem
