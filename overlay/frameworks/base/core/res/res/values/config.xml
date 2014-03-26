@@ -24,6 +24,11 @@
 
     <bool name="config_allowAllRotations">false</bool>
 
+    <!-- Flag indicating that this device does not rotate and will always remain in its default
+         orientation. Activities that desire to run in a non-compatible orientation will be run
+         from an emulated display within the physical display. -->
+    <bool name="config_forceDefaultOrientation">true</bool>
+
     <string-array translatable="false" name="networkAttributes">
         <item>"wifi,1,1,2,-1,true"</item>
         <item>"bluetooth,7,7,0,-1,true"</item>
