@@ -73,8 +73,28 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/panjit_touch.idc:system/usr/idc/panjit_touch.idc \
     $(LOCAL_PATH)/prebuilt/raydium_ts.idc:system/usr/idc/raydium_ts.idc \
     $(LOCAL_PATH)/prebuilt/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/prebuilt/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
-    $(LOCAL_PATH)/prebuilt/Bluetooth_00_06_66_42.kl:system/usr/keylayout/Bluetooth_00_06_66_42.kl
+    $(LOCAL_PATH)/prebuilt/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl
+
+# additional keylayouts for peripherals
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Bluetooth_00_06_66_42.kl:system/usr/keylayout/Bluetooth_00_06_66_42.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_044f_Product_d007.kl:system/usr/keylayout/Vendor_044f_Product_d007.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_045e_Product_0719.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21d.kl:system/usr/keylayout/Vendor_046d_Product_c21d.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21e.kl:system/usr/keylayout/Vendor_046d_Product_c21e.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21f.kl:system/usr/keylayout/Vendor_046d_Product_c21f.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_057e_Product_0306.kl:system/usr/keylayout/Vendor_057e_Product_0306.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_06a3_Product_040b.kl:system/usr/keylayout/Vendor_06a3_Product_040b.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_0e6f_Product_011f.kl:system/usr/keylayout/Vendor_0e6f_Product_011f.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_2378_Product_100a.kl:system/usr/keylayout/Vendor_2378_Product_100a.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_2836_Product_0001.kl:system/usr/keylayout/Vendor_2836_Product_0001.kl \
+    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_aa55_Product_0101.kl:system/usr/keylayout/Vendor_aa55_Product_0101.kl
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
