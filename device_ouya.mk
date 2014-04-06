@@ -123,7 +123,8 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
     audio.a2dp.default \
-    audio.usb.default
+    audio.usb.default \
+    audio.r_submix.default
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
