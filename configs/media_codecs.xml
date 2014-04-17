@@ -99,18 +99,9 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" />
         <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9" />
 
-        <MediaCodec name="DDPDecoder" type="audio/eac3" />
-        <MediaCodec name="DDPDecoder" type="audio/ac3" />
-        <MediaCodec name="DTSDecoder" type="audio/dts" />
-        <MediaCodec name="EVRCDecoder" type="audio/evrc"/>
-        <MediaCodec name="QCELPDecoder" type="audio/qcelp"/>
     </Decoders>
 
     <Encoders>
-        <MediaCodec name="OMX.Nvidia.mp4.encoder" type="video/mp4v-es" />
-        <MediaCodec name="OMX.Nvidia.h263.encoder" type="video/3gpp" />
-        <MediaCodec name="OMX.Nvidia.h264.encoder" type="video/avc" />
-
         <MediaCodec name="OMX.google.amrnb.encoder" type="audio/3gpp" />
         <MediaCodec name="OMX.google.amrwb.encoder" type="audio/amr-wb" />
         <MediaCodec name="OMX.google.aac.encoder" type="audio/mp4a-latm" />
