@@ -84,9 +84,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21d.kl:system/usr/keylayout/Vendor_046d_Product_c21d.kl \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21e.kl:system/usr/keylayout/Vendor_046d_Product_c21e.kl \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c21f.kl:system/usr/keylayout/Vendor_046d_Product_c21f.kl \
-    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_057e_Product_0306.kl:system/usr/keylayout/Vendor_057e_Product_0306.kl \
     $(LOCAL_PATH)/prebuilt/oem_keylayout/Vendor_06a3_Product_040b.kl:system/usr/keylayout/Vendor_06a3_Product_040b.kl \
