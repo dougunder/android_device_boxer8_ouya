@@ -2,7 +2,7 @@
 -include vendor/boxer8/ouya/BoardConfigVendor.mk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-USE_CAMERA_STUB = true
+
 
 # board
 TARGET_NO_RADIOIMAGE := true
@@ -39,6 +39,9 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUEDROID_VENDOR_CONF := device/boxer8/ouya/bluetooth/vnd_ouya.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/boxer8/ouya/bluetooth
+
+# Camera
+BOARD_USB_CAMERA := true
 
 # wifi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
